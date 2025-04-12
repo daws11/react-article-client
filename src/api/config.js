@@ -1,1 +1,1 @@
-export const API_BASE_URL = 'http://localhost:8080/article'; //config untuk deploy netlify
+export const API_BASE_URL = 'https://go-article-api-4a57f2cf2091.herokuapp.com/article'; //config untuk deploy netlify dengan heroku
