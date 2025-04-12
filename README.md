@@ -3,8 +3,12 @@ Repository react-client Artikel ini dibuat oleh Muhammad Abdurrahman Firdaus seb
 Repository ini berisi aplikasi frontend yang dibangun menggunakan React (dengan Vite) untuk berinteraksi dengan [Go Article API Microservice](https://github.com/daws11/go-article-api). Aplikasi ini memungkinkan pengguna untuk mengelola artikel (membuat, melihat, mengedit, memindahkan ke trash) dan melihat pratinjau artikel yang sudah dipublikasikan.
 
 Proyek ini dibuat berdasarkan kebutuhan dari dokumen "Tes Frontend Sharing Vision 2023".
+## Screenshot Aplikasi
 
-## Tumpukan Teknologi (Technology Stack)
+Berikut adalah tampilan antarmuka aplikasi React Article Client:
+
+![Screenshot Aplikasi](./app.png)(./app2.png)
+## Technology Stack
 
 * **Framework/Library:** React.js
 * **Build Tool:** Vite
@@ -49,7 +53,7 @@ Jika URL backend Anda berbeda, ubah nilai `API_BASE_URL` di file `src/api/config
 
 1.  **Clone Repository:**
     ```bash
-    git clone [https://github.com/daws11/react-article-client.git](https://github.com/daws11/react-article-client.git) # Ganti dengan URL repo Anda
+    git clone [https://github.com/daws11/react-article-client.git](https://github.com/daws11/react-article-client.git) 
     cd react-article-client
     ```
 
@@ -76,10 +80,3 @@ Jika URL backend Anda berbeda, ubah nilai `API_BASE_URL` di file `src/api/config
 ## Menjalankan Aplikasi
 
 Setelah server pengembangan berjalan, buka browser Anda dan akses alamat yang ditampilkan (biasanya `http://localhost:5173` atau port lain jika 5173 sudah digunakan).
-
-## Catatan Implementasi Penting
-
-* **Pemrosesan Data di Frontend:** Berdasarkan desain saat ini, endpoint `GET /article` di backend **mengirimkan SEMUA artikel sekaligus**. Proses **penyaringan (filtering)** berdasarkan status (Published, Draft, Trashed) dan **pagination** (pembagian halaman) sepenuhnya dilakukan **di sisi frontend (React)**.
-* **Peringatan Performa:** Pendekatan ini dapat menyebabkan **masalah performa** jika jumlah artikel menjadi sangat banyak, karena semua data harus diunduh dan diproses oleh browser setiap kali halaman daftar artikel dibuka. Untuk aplikasi skala besar, sangat direkomendasikan untuk memodifikasi backend agar mendukung penyaringan dan pagination di sisi server.
-* **Interaksi API:** Semua interaksi dengan backend API diatur dalam fungsi-fungsi di dalam direktori `src/api/`.
-* **Komponen UI:** Sebagian besar komponen antarmuka pengguna (Tabs, Table, Button, Form, Card, Pagination, dll.) dibuat menggunakan library Material UI (MUI).
