@@ -7,7 +7,8 @@ Proyek ini dibuat berdasarkan kebutuhan dari dokumen "Tes Frontend Sharing Visio
 
 Berikut adalah tampilan antarmuka aplikasi React Article Client:
 
-![Screenshot Aplikasi](./app.png)(./app2.png)
+![Screenshot Aplikasi](./app.png)
+![Screenshot Aplikasi](./app2.png)
 ## Technology Stack
 
 * **Framework/Library:** React.js
